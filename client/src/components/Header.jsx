@@ -23,22 +23,22 @@ export default function Header() {
     }
   }, [location.search]);
   return (
-    <header className='bg-slate-200 shadow-md'>
-      <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
+    <header className='shadow-md bg-slate-200'>
+      <div className='flex items-center justify-between max-w-6xl p-3 mx-auto'>
         <Link to='/'>
-          <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
-            <span className='text-slate-500'>Sahand</span>
-            <span className='text-slate-700'>Estate</span>
+          <h1 className='flex flex-wrap text-sm font-bold sm:text-xl'>
+            <span className='text-slate-500'>Jewel</span>
+            <span className='text-slate-700'>Housing</span>
           </h1>
         </Link>
         <form
           onSubmit={handleSubmit}
-          className='bg-slate-100 p-3 rounded-lg flex items-center'
+          className='flex items-center p-3 rounded-lg bg-slate-100'
         >
           <input
             type='text'
             placeholder='Search...'
-            className='bg-transparent focus:outline-none w-24 sm:w-64'
+            className='w-24 bg-transparent focus:outline-none sm:w-64'
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -60,7 +60,7 @@ export default function Header() {
           <Link to='/profile'>
             {currentUser ? (
               <img
-                className='rounded-full h-7 w-7 object-cover'
+                className='object-cover rounded-full h-7 w-7'
                 src={currentUser.avatar}
                 alt='profile'
               />

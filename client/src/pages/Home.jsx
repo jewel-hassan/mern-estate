@@ -48,21 +48,21 @@ export default function Home() {
   return (
     <div>
       {/* top */}
-      <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto'>
-        <h1 className='text-slate-700 font-bold text-3xl lg:text-6xl'>
+      <div className='flex flex-col max-w-6xl gap-6 px-3 mx-auto p-28'>
+        <h1 className='text-3xl font-bold text-slate-700 lg:text-6xl'>
           Find your next <span className='text-slate-500'>perfect</span>
           <br />
           place with ease
         </h1>
-        <div className='text-gray-400 text-xs sm:text-sm'>
-          Sahand Estate is the best place to find your next perfect place to
+        <div className='text-xs text-gray-400 sm:text-sm'>
+          Jewel Estate is the best place to find your next perfect place to
           live.
           <br />
           We have a wide range of properties for you to choose from.
         </div>
         <Link
           to={'/search'}
-          className='text-xs sm:text-sm text-blue-800 font-bold hover:underline'
+          className='text-xs font-bold text-blue-800 sm:text-sm hover:underline'
         >
           Let's get started...
         </Link>
@@ -88,7 +88,7 @@ export default function Home() {
 
       {/* listing results for offer, sale and rent */}
 
-      <div className='max-w-6xl mx-auto p-3 flex flex-col gap-8 my-10'>
+      <div className='flex flex-col max-w-6xl gap-8 p-3 mx-auto my-10'>
         {offerListings && offerListings.length > 0 && (
           <div className=''>
             <div className='my-3'>
